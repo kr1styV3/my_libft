@@ -1,8 +1,6 @@
 # Libft 42
 
-Welcome to Libft , a fundamental project at 42 School that challenges students to build their own C library. 
-This library contains a collection of custom implementations of standard C functions,
-as well as additional utility functions to facilitate programming tasks.
+this is my libft that is going to get a lot of implementations
 
 # Future implementation awaited 
 
