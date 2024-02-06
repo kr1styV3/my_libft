@@ -17,13 +17,16 @@ LIBFT_SRC = $(addprefix src/libft_src/,ft_isdigit.c ft_isalpha.c ft_isalnum.c ft
 
 PRINTF_SRC = $(addprefix src/printf_src/,ft_printf.c ft_printf_str.c ft_printf_binary.c ft_printf_nbr.c)
 
+GET_NEXT_LINE_SRC = $(addprefix src/get_next_line_src/,get_next_line.c get_next_line_utils.c)
+
 
 # Object files for the library
 LIBFT_OBJ = $(LIBFT_SRC:src/libft_src/%.c=$(OBJ_DIR)%.o)
 PRINTF_OBJ = $(PRINTF_SRC:src/printf_src/%.c=$(OBJ_DIR)%.o)
+GET_NEXT_LINE_OBJ = $(GET_NEXT_LINE_SRC:src/get_next_line_src/%.c=$(OBJ_DIR)%.o)
 
 # Combine all object files
-OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ)
+OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ)
 
 # ANSI escape sequence for red text
 RED = \033[0;31m
@@ -45,12 +48,16 @@ $(OBJ_DIR)%.o: src/libft_src/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: src/printf_src/%.c | $(OBJ_DIR)
-	@echo "$(RED)Compiling $<..."
+	@echo "$(PINK_FLUO)Compiling $<..."
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)%.o: src/get_next_line_src/%.c | $(OBJ_DIR)
+	@echo "$(GOLD)Compiling $<..."
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to make the library
 $(NAME): $(OBJ)
-	@echo "$(PINK_FLUO)Creating archive $(NAME)..."
+	@echo "$(COOL_YELLOW)Creating archive $(NAME)..."
 	@ar rcs $@ $(OBJ)
 	@echo "$(GOLD)Library $(NAME) created."
 
