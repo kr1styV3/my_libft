@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_lstclear.c                                  :+:      :+:    :+:   */
+/*   ft_int_lstadd_back.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:34:14 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 18:24:53 by chrlomba         ###   ########.fr       */
+/*   Created: 2023/12/01 15:47:33 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/19 18:36:42 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/push_swap_helper.h"
 
-void	ft_int_lstclear(t_int_list *stack)
+void	ft_int_lstadd_back(t_int_list **lst, t_int_list *new)
 {
-	t_int_list	*tmp;
+	t_int_list		*last;
 
-	while (stack)
+	last = *lst;
+	if (new == NULL)
+		return ;
+	if (last == NULL)
 	{
-		tmp = stack;
-		stack = stack->next;
-		free(tmp);
+		*lst = new;
+		return ;
 	}
+	while (last->next != NULL)
+		last = last->next;
+	last->next = new;
 }

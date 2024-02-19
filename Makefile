@@ -20,7 +20,8 @@ PRINTF_SRC = $(addprefix src/printf_src/,ft_printf.c ft_printf_str.c ft_printf_b
 GET_NEXT_LINE_SRC = $(addprefix src/get_next_line_src/,get_next_line.c get_next_line_utils.c)
 
 PUSH_SWAP_LST_SRC = $(addprefix src/push_swap_helpers_src/lst/, ft_int_lstnew.c \
-	ft_int_lstclear.c \)
+	ft_int_lstclear.c \
+	ft_int_lstadd_back.c)
 
 PUSH_SWAP_HELPERS_SRC = $(addprefix src/push_swap_helpers_src/helper/, ft_check_input.c \
 	ft_free_split.c \
