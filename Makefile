@@ -76,7 +76,7 @@ $(NAME): $(OBJ)
 	@ar rcs $@ $(OBJ)
 	@echo "$(COOL_YELLOW)Library $(NAME) created.$(NC)"
 	@echo "$$LIBFT_ASCII_ART"
-	@sleep 3
+	@sleep 2
 
 
 $(OBJ_DIR):
