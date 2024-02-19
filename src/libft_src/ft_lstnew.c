@@ -6,13 +6,13 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 16:29:10 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/18 23:28:37 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:41 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
-t_list	*ft_lstnew(int content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*tmp;
 

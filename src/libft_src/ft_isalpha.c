@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:07:53 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 17:48:59 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:48 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_isalpha(int chr)
 {

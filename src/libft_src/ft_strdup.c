@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:18:21 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 18:21:31 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:32 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 char	*ft_strdup(const char *str)
 {

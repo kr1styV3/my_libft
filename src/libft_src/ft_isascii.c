@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:42:21 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 16:07:38 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:47 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_isascii(int chr)
 {

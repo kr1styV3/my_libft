@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:53:55 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/14 17:02:23 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:33 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 static int	count_words(char const *s, char c)
 {

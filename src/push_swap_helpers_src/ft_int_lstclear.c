@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 13:39:15 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:21 by chrlomba         ###   ########.fr       */
+/*   Created: 2023/12/02 16:34:14 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/19 17:35:39 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../headers/push_swap_helper.h"
 
-int	ft_toupper(int chr)
+void	ft_int_lstclear(t_list **lst, void (*del)(int))
 {
-	if (chr >= 'a' && chr <= 'z')
-		chr -= 32;
-	return (chr);
-}
-/*
-int	main(int ac, char **av)
-{
-	int		i;
-	int		val;
+	t_list	*tmp;
 
-	i = 1;
-	while (i <= ac - 1)
+	while ((*lst))
 	{
-		val = ft_toupper(av[i][0]);
-		printf("il valore del mio ft_\t%i\n", val);
-		val = toupper(av[i][0]);
-		printf("il valore del NON mio ft_\t%i\n", val);
-		i++;
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		(*lst) = tmp;
 	}
 }
-*/

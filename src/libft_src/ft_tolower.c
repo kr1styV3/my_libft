@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:45:55 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/12 18:21:42 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:23 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_tolower(int chr)
 {

@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:59:13 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 17:54:39 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:49 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 void	*ft_calloc(size_t num_elems, size_t byte_size)
 {

@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:53:04 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 16:14:58 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:27 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_strncmp(const char *str, const char *cmp, size_t n_bytes)
 {

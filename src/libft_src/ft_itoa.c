@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:37:09 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/13 18:20:09 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:45 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 static int	intlen(int number)
 {

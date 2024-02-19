@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   push_swap_helper.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 13:39:15 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:21 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/19 17:30:48 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/19 17:47:19 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#ifndef PUSH_SWAP_HELPER_H
+# define PUSH_SWAP_HELPER_H
 
-int	ft_toupper(int chr)
-{
-	if (chr >= 'a' && chr <= 'z')
-		chr -= 32;
-	return (chr);
-}
-/*
-int	main(int ac, char **av)
-{
-	int		i;
-	int		val;
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
 
-	i = 1;
-	while (i <= ac - 1)
-	{
-		val = ft_toupper(av[i][0]);
-		printf("il valore del mio ft_\t%i\n", val);
-		val = toupper(av[i][0]);
-		printf("il valore del NON mio ft_\t%i\n", val);
-		i++;
-	}
-}
-*/
+typedef struct s_list
+{
+	int				content;
+	struct s_list	*next;
+}	t_list;
+
+t_list	*ft_int_lstnew(int content);
+void	ft_int_lstclear(t_list **lst, void (*del)(int));
+
+#endif

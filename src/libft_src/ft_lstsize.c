@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 15:22:35 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/12/18 19:38:10 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:40 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

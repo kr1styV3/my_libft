@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:31:36 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/13 17:47:38 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:51 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 void	ft_bzero(void *str, size_t n_bytes)
 {

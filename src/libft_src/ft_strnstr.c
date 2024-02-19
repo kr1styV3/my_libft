@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:09:20 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 18:39:56 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:26 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 char	*ft_strnstr(const char *str, const char *substr, size_t n_bytes)
 {

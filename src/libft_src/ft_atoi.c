@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:37:03 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/13 13:57:21 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:52 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_atoi(const char *number_str)
 {

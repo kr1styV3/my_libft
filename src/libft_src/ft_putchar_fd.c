@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:59:20 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/25 22:00:19 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:36 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

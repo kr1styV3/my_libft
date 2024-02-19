@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 00:22:12 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/12 18:27:53 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:30 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

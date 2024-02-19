@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:18:46 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/23 22:26:36 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:46 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_isprint(int chr)
 {

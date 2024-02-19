@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:12:42 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 19:16:03 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:30 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 static void	copy_chars(char *dest, const char *src,
 		size_t *dest_counter, size_t src_len)

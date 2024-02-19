@@ -19,14 +19,18 @@ PRINTF_SRC = $(addprefix src/printf_src/,ft_printf.c ft_printf_str.c ft_printf_b
 
 GET_NEXT_LINE_SRC = $(addprefix src/get_next_line_src/,get_next_line.c get_next_line_utils.c)
 
+PUSH_SWAP_HELPERS_SRC = $(addprefix src/push_swap_helpers_src/, ft_int_lstnew.c \
+	ft_int_lstclear.c)
+
 
 # Object files for the library
 LIBFT_OBJ = $(LIBFT_SRC:src/libft_src/%.c=$(OBJ_DIR)%.o)
 PRINTF_OBJ = $(PRINTF_SRC:src/printf_src/%.c=$(OBJ_DIR)%.o)
 GET_NEXT_LINE_OBJ = $(GET_NEXT_LINE_SRC:src/get_next_line_src/%.c=$(OBJ_DIR)%.o)
+PUSH_SWAP_HELPERS_OBJ = $(PUSH_SWAP_HELPERS_SRC:src/push_swap_helpers_src/%.c=$(OBJ_DIR)%.o)
 
 # Combine all object files
-OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ)
+OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ)
 
 # ANSI escape sequence for red text
 RED = \033[0;31m
@@ -67,6 +71,9 @@ $(OBJ_DIR)%.o: src/printf_src/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: src/get_next_line_src/%.c | $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)%.o: src/push_swap_helpers_src/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 

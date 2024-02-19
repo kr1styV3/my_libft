@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:07:03 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 15:59:07 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:48 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 int	ft_isalnum(int chr)
 {

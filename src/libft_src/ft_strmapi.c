@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 20:38:34 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 16:26:59 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:27 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

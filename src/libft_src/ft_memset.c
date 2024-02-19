@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:28:22 by chrlomba          #+#    #+#             */
-/*   Updated: 2023/11/13 17:49:10 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:37 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 void	*ft_memset(void *src, int charset, size_t n_bytes)
 {

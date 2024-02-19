@@ -6,11 +6,11 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:51:38 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/01/12 18:14:50 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:11:25 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
 static int	is_charset(const char str, const char *charset)
 {
