@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_is_valid_input.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:34:14 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 17:35:39 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/19 18:12:51 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/19 18:20:56 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/push_swap_helper.h"
+#include "../headers/libft.h"
 
-void	ft_int_lstclear(t_list **lst, void (*del)(int))
+int	ft_is_valid_input(char *str)
 {
-	t_list	*tmp;
-
-	while ((*lst))
+	if (*str == '-')
+		++str;
+	if (!*str)
+		return (0);
+	while (*str)
 	{
-		tmp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		(*lst) = tmp;
+		if (!ft_isdigit(*str))
+			return (0);
+		++str;
 	}
+	return (1);
 }
