@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_lstadd_back.c                               :+:      :+:    :+:   */
+/*   ft_pa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 15:47:33 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/20 01:18:17 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/20 01:16:24 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/20 01:18:08 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_swap_helper.h"
+#include "../headers/push_swap.h"
 
-void
-ft_int_lstadd_back(t_int_list **lst, t_int_list *new)
+void	ft_pa(t_int_list *ps)
 {
-	t_int_list		*last;
+	t_int_list	*first;
 
-	last = *lst;
-	if (new == NULL)
+	if (ps->b == NULL)
 		return ;
-	if (last == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	while (last->next != NULL)
-		last = last->next;
-	last->next = new;
+	first = ps->b;
+	ps->b = ps->b->next;
+	first->next = ps->a;
+	ps->a = first;
 }

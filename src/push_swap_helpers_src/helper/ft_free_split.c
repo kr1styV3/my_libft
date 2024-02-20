@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:10:32 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 18:15:48 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/20 01:18:15 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,4 @@ void	ft_free_split(char **split)
 	}
 	free(split);
 }
+

@@ -27,6 +27,19 @@ PUSH_SWAP_HELPERS_SRC = $(addprefix src/push_swap_helpers_src/helper/, ft_check_
 	ft_free_split.c \
 	ft_is_valid_input.c)
 
+PUSH_SWAP_MOVES_SRC = $(addprefix src/push_swap_helpers_src/moves/, ft_sa.c \
+	ft_sb.c \
+	ft_ss.c \
+	ft_pa.c \
+	ft_pb.c \
+	ft_ra.c \
+	ft_rb.c \
+	ft_rr.c \
+	ft_rra.c \
+	ft_rrb.c \
+	ft_rrr.c)
+
+
 
 # Object files for the library
 LIBFT_OBJ = $(LIBFT_SRC:src/libft_src/%.c=$(OBJ_DIR)%.o)
