@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:17:30 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/06 15:53:44 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/23 16:42:12 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*handle_read(char **rimane, char *buffer)
 	char	*tmp;
 
 	if (*rimane)
-		tmp = ft_strjoin(rimane, buffer);
+		tmp = ft_strjoin_with_free(rimane, buffer);
 	else
 		tmp = ft_strdup(buffer);
 	return (tmp);
