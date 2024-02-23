@@ -21,23 +21,17 @@ GET_NEXT_LINE_SRC = $(addprefix src/get_next_line_src/,get_next_line.c get_next_
 
 PUSH_SWAP_LST_SRC = $(addprefix src/push_swap_helpers_src/lst/, ft_int_lstnew.c \
 	ft_int_lstclear.c \
-	ft_int_lstadd_back.c)
+	ft_int_lstadd_back.c \
+	ft_int_lstsize.c)
 
 PUSH_SWAP_HELPERS_SRC = $(addprefix src/push_swap_helpers_src/helper/, ft_check_input.c \
 	ft_free_split.c \
 	ft_is_valid_input.c)
 
-PUSH_SWAP_MOVES_SRC = $(addprefix src/push_swap_helpers_src/moves/, ft_sa.c \
-	ft_sb.c \
-	ft_ss.c \
-	ft_pa.c \
-	ft_pb.c \
-	ft_ra.c \
-	ft_rb.c \
-	ft_rr.c \
-	ft_rra.c \
-	ft_rrb.c \
-	ft_rrr.c)
+PUSH_SWAP_MOVES_SRC = $(addprefix src/push_swap_helpers_src/moves/, ft_push.c \
+	ft_rotate.c \
+	ft_reverse_rotate.c \
+	ft_swap.c)
 
 
 
@@ -47,9 +41,10 @@ PRINTF_OBJ = $(PRINTF_SRC:src/printf_src/%.c=$(OBJ_DIR)%.o)
 GET_NEXT_LINE_OBJ = $(GET_NEXT_LINE_SRC:src/get_next_line_src/%.c=$(OBJ_DIR)%.o)
 PUSH_SWAP_LST_OBJ = $(PUSH_SWAP_LST_SRC:src/push_swap_helpers_src/lst/%.c=$(OBJ_DIR)%.o)
 PUSH_SWAP_HELPERS_OBJ = $(PUSH_SWAP_HELPERS_SRC:src/push_swap_helpers_src/helper/%.c=$(OBJ_DIR)%.o)
+PUSH_SWAP_MOVES_OBJ = $(PUSH_SWAP_MOVES_SRC:src/push_swap_helpers_src/moves/%.c=$(OBJ_DIR)%.o)
 
 # Combine all object files
-OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ) $(PUSH_SWAP_LST_OBJ)
+OBJ = $(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ) $(PUSH_SWAP_LST_OBJ) $(PUSH_SWAP_MOVES_OBJ)
 
 # ANSI escape sequence for red text
 RED = \033[0;31m
@@ -98,6 +93,8 @@ $(OBJ_DIR)%.o: src/push_swap_helpers_src/helper/%.c | $(OBJ_DIR)
 $(OBJ_DIR)%.o: src/push_swap_helpers_src/lst/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
+$(OBJ_DIR)%.o: src/push_swap_helpers_src/moves/%.c | $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to make the library, only display ASCII art on success
 $(NAME): $(OBJ)

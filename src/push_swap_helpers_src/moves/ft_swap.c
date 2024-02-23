@@ -1,33 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_valid_input.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:12:51 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/21 12:35:41 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/21 13:17:55 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/21 13:33:49 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/push_swap_helper.h"
-#include "../headers/libft.h"
 #include "../headers/ft_printf.h"
 
-int	ft_is_valid_input(char *str)
+void	ft_swap(t_int_list **stack)
 {
-	if (*str == '-')
-		++str;
-	if (!*str)
-		return (0);
-	while (*str)
-	{
-		if (!ft_isdigit(*str))
-		{
-			ft_printf("invalid input\n");
-			return (0);
-		}
-		++str;
-	}
-	return (1);
+	t_int_list	*tmp;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+		return ;
+	tmp = *stack;
+	(*stack) = (*stack)->next;
+	tmp->next = (*stack)->next;
+	(*stack)->next = tmp;
+}
+
+void	ft_sa(t_int_list **stack_a)
+{
+	ft_swap(stack_a);
+	ft_printf("sa\n");
+}
+
+void	ft_sb(t_int_list **stack_b)
+{
+	ft_swap(stack_b);
+	ft_printf("sb\n");
+}
+
+void	ft_ss(t_int_list **stack_a, t_int_list **stack_b)
+{
+	ft_swap(stack_a);
+	ft_swap(stack_b);
+	ft_printf("ss\n");
 }

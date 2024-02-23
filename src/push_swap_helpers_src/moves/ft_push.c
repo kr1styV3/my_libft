@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_lstclear.c                                  :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:34:14 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/21 12:09:42 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/21 13:21:59 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/21 13:32:49 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/push_swap_helper.h"
+#include "../headers/ft_printf.h"
 
-void	ft_int_lstclear(t_int_list *stack)
+void	ft_push(t_int_list **from, t_int_list **to)
 {
 	t_int_list	*tmp;
 
-	while (stack)
-	{
-		tmp = stack;
-		stack = stack->next;
-		free(tmp);
-	}
-	free(stack);
+	if (*from == NULL)
+		return ;
+	tmp = *from;
+	*from = (*from)->next;
+	tmp->next = *to;
+	*to = tmp;
+}
+
+void	ft_pa(t_int_list **stack_a, t_int_list **stack_b)
+{
+	ft_push(stack_b, stack_a);
+	ft_printf("pa\n");
+}
+
+void	ft_pb(t_int_list **stack_a, t_int_list **stack_b)
+{
+	ft_push(stack_a, stack_b);
+	ft_printf("pb\n");
 }

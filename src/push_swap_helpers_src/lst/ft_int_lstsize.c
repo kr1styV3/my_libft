@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pa.c                                            :+:      :+:    :+:   */
+/*   ft_int_lstsize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 01:16:24 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/20 01:18:08 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/23 13:32:25 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/02/23 13:32:50 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_swap.h"
+#include "../headers/push_swap_helper.h"
 
-void	ft_pa(t_int_list *ps)
+int	ft_int_lstsize(t_int_list *lst)
 {
-	t_int_list	*first;
+	int		i;
 
-	if (ps->b == NULL)
-		return ;
-	first = ps->b;
-	ps->b = ps->b->next;
-	first->next = ps->a;
-	ps->a = first;
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
