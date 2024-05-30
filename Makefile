@@ -103,6 +103,8 @@ $(NAME): $(OBJ)
 	@echo "$(COOL_YELLOW)Library $(NAME) created.$(NC)"
 	@echo "$$LIBFT_ASCII_ART"
 	@sleep 2
+	@clear
+	@echo "$(COOL_YELLOW)Library $(NAME) created.$(NC)"
 
 
 $(OBJ_DIR):

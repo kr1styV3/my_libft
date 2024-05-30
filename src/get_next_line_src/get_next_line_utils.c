@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 19:39:56 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/06 15:39:38 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/23 16:43:41 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,50 +30,7 @@ char	*ft_strdup_with_free(char **s)
 	return (str_copy);
 }
 
-char	*ft_strdup(char *s)
-{
-	char	*buf;
-	char	*original_buf;
-
-	buf = malloc(ft_strlen(s) + 1);
-	if (buf == NULL)
-		return (NULL);
-	original_buf = buf;
-	while (s && *s)
-		*buf++ = *s++;
-	*buf = '\0';
-	return (original_buf);
-}
-
-char	*ft_substr(char *s, unsigned int start, size_t len)
-{
-	char	*sub_string;
-	size_t	j;
-	size_t	i;
-
-	i = 0;
-	j = 0;
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	if (len == 0)
-		return (NULL);
-	sub_string = (char *)malloc(len + 1 * sizeof(char));
-	if (!sub_string)
-		return (NULL);
-	while (s && s[i])
-	{
-		if (i >= start && j < len)
-		{
-			sub_string[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	sub_string[len] = '\0';
-	return (sub_string);
-}
-
-char	*ft_strjoin(char **s1, char *s2)
+char	*ft_strjoin_with_free(char **s1, char *s2)
 {
 	char	*res;
 	int		len;
@@ -98,16 +55,4 @@ char	*ft_strjoin(char **s1, char *s2)
 	free(*s1);
 	*s1 = NULL;
 	return (res);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	while (s && s[i])
-		i++;
-	return (i);
 }
