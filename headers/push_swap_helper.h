@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:30:48 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/23 13:36:40 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:53:41 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_int_list
 {
 	int					content;
 	struct s_int_list	*next;
+	struct s_int_list	*prev;
 }	t_int_list;
 
 // lst_functions

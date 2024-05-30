@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:17:55 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/21 13:33:49 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:58:07 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ void	ft_swap(t_int_list **stack)
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
 	tmp = *stack;
-	(*stack) = (*stack)->next;
+	*stack = tmp->next;
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
+	(*stack)->prev = NULL;
 }
 
 void	ft_sa(t_int_list **stack_a)

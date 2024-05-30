@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:29:29 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/23 13:17:34 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:56:59 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@ void	ft_reverse_rotate(t_int_list **stack)
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
 	tmp = *stack;
-	last = *stack;
-	while (last->next != NULL)
-		last = last->next;
-	while (tmp->next != last)
+	while (tmp->next)
+	{
+		last = tmp;
 		tmp = tmp->next;
-	last->next = *stack;
-	*stack = last;
-	tmp->next = NULL;
+	}
+	last->next = NULL;
+	tmp->next = *stack;
+	(*stack)->prev = tmp;
+	*stack = tmp;
+	(*stack)->prev = NULL;
 }
 
 void	ft_rra(t_int_list **stack_a)

@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I headers/
+CFLAGS = -Wall -Wextra -Werror -g -I headers/
 
 # Define the base object directory
 OBJ_DIR = .obj/

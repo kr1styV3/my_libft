@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 15:47:33 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/20 21:37:06 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:54:50 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	ft_int_lstadd_back(t_int_list **lst, t_int_list *new)
 	while (last->next != NULL)
 		last = last->next;
 	last->next = new;
+	new->prev = last;
 }

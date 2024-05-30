@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:21:59 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/21 13:32:49 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/29 11:35:28 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ void	ft_push(t_int_list **from, t_int_list **to)
 		return ;
 	tmp = *from;
 	*from = (*from)->next;
+	if (*from != NULL)
+		(*from)->prev = NULL;
 	tmp->next = *to;
+	if (*to != NULL)
+		(*to)->prev = tmp;
+	tmp->prev = NULL;
 	*to = tmp;
 }
 
