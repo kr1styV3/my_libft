@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:30:48 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/05/10 18:53:41 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/05 20:02:14 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,7 @@ typedef struct s_int_list
 	struct s_int_list	*prev;
 }	t_int_list;
 
-// lst_functions
-t_int_list	*ft_int_lstnew(int content);
-void		ft_int_lstclear(t_int_list *stack);
-void		ft_int_lstadd_back(t_int_list **lst, t_int_list *new);
-int			ft_int_lstsize(t_int_list *lst);
 // helper_functions
-void		ft_free_split(char **split);
 int			ft_check_input(int argc, char **argv);
 int			ft_is_valid_input(char *str);
 
