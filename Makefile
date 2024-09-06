@@ -16,7 +16,7 @@ FILE_DESCRIPTOR_SRC = $(addprefix libft_src/file_descriptor/, ft_putchar_fd.c ft
 LIST_SRC = $(addprefix libft_src/list/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 	ft_lstdelone.c ft_lstclear.c ft_lstmap.c ft_lstiter.c ft_int_lstadd_back.c ft_int_lstclear.c ft_int_lstnew.c ft_int_lstsize.c)
 ARR_TO_NUM_SRC = $(addprefix libft_src/arr_to_num/, ft_atoi.c ft_atol.c ft_atoll.c ft_atos.c ft_atoui.c)
-
+ERROR_SRC = $(addprefix libft_src/error_managment/, ft_error.c)
 # Additional sources
 PRINTF_SRC = $(addprefix libft_src/printf_src/, ft_printf.c ft_printf_str.c ft_printf_binary.c ft_printf_nbr.c)
 GET_NEXT_LINE_SRC = $(addprefix libft_src/get_next_line_src/, get_next_line.c get_next_line_utils.c)
@@ -32,6 +32,7 @@ STR_UTILS_OBJ = $(STR_UTILS_SRC:libft_src/str_utils/%.c=$(OBJ_DIR)%.o)
 FILE_DESCRIPTOR_OBJ = $(FILE_DESCRIPTOR_SRC:libft_src/file_descriptor/%.c=$(OBJ_DIR)%.o)
 LIST_OBJ = $(LIST_SRC:libft_src/list/%.c=$(OBJ_DIR)%.o)
 ARR_TO_NUM_OBJ = $(ARR_TO_NUM_SRC:libft_src/arr_to_num/%.c=$(OBJ_DIR)%.o)
+ERROR_OBJ = $(ERROR_SRC:libft_src/error_managment/%.c=$(OBJ_DIR)%.o)
 
 PRINTF_OBJ = $(PRINTF_SRC:libft_src/printf_src/%.c=$(OBJ_DIR)%.o)
 GET_NEXT_LINE_OBJ = $(GET_NEXT_LINE_SRC:libft_src/get_next_line_src/%.c=$(OBJ_DIR)%.o)
@@ -41,7 +42,8 @@ PUSH_SWAP_MOVES_OBJ = $(PUSH_SWAP_MOVES_SRC:libft_src/push_swap_helpers_src/move
 # Combine all object files
 OBJ = $(IS_CHAR_OBJ) $(MEM_ALLOC_OBJ) $(MTX_UTILS_OBJ) $(MEMORY_UTILS_OBJ) $(STR_ALLOC_OBJ) \
 	$(STR_UTILS_OBJ) $(FILE_DESCRIPTOR_OBJ) $(LIST_OBJ) $(ARR_TO_NUM_OBJ) \
-	$(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ) $(PUSH_SWAP_MOVES_OBJ)
+	$(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ) $(PUSH_SWAP_MOVES_OBJ) \
+	$(ERROR_OBJ)
 
 # ANSI escape sequence for no color (reset)
 NC = \033[0m
@@ -87,6 +89,9 @@ $(OBJ_DIR)%.o: libft_src/push_swap_helpers_src/helper/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/push_swap_helpers_src/moves/%.c | $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)%.o: libft_src/error_managment/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to make the library, only display ASCII art on success
