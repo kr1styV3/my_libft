@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/07 16:36:21 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/08 18:25:52 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -361,7 +361,14 @@ char *ft_itoa(int n);
  * @return The length of the string.
  */
 size_t ft_strlen(const char *str);
-
+/**
+ * @brief Copies up to n characters from src to dest.
+ * @param dest The destination buffer to copy the string into.
+ * @param src The source string to copy from.
+ * @param n The maximum number of characters to copy.
+ * @return A pointer to the destination string (dest).
+ */
+char *ft_strncpy(char *dest, const char *src, size_t n);
 /**
  * @brief Copies up to dstsize - 1 characters from the source string to the destination string.
  * @param dst The destination buffer.
