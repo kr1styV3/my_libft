@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:07:03 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:48 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/08 17:12:11 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isalnum(int chr)
 {
 	if (ft_isalpha(chr) || ft_isdigit(chr))
-		return (8);
+		return (1);
 	else
 		return (0);
 }
