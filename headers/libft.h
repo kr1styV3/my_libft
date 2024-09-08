@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/05 22:06:40 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/07 16:36:21 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,12 @@ int ft_isdigit(int chr);
  * @return 1 if the character is printable, 0 otherwise.
  */
 int ft_isprint(int chr);
+/**
+ * @brief Checks if the given character is a whitespace character.
+ * @param chr The character to be checked.
+ * @return 1 if the character is a whitespace character, 0 otherwise.
+ */
+int ft_isspace(int chr);
 /**
  * @brief Converts a character to its lowercase equivalent.
  * @param chr The character to be converted.
