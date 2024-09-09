@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 17:17:08 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/08 23:06:44 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/09/08 22:58:43 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/09/08 22:58:58 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 
 	i = 0;
-	while (str && str[i] != '\0')
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	return (i);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*
-int	main(int ac, char **av)
-{
-	int					i;
-	size_t				k;
-
-	i = 0;
-	while (i < ac - 1)
-	{
-		k = ft_strlen(av[i]);
-		printf("il mio ft_\t%li\n", k);
-		k = strlen(av[i]);
-		printf("il NON MIO ft_\t%li\n", k);
-		i++;
-	}
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:48:35 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:33 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/09 02:16:39 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strchr(const char *str, int charset)
 		str++;
 	}
 	if (charset_holder == '\0')
-		return ((char *)str);
+		return (NULL);
 	return (NULL);
 }
 

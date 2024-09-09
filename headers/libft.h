@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/08 18:25:52 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/09/08 23:00:42 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -339,6 +339,13 @@ char *ft_substr(const char *s, unsigned int start, size_t len);
  */
 char *ft_strjoin(const char *s1, const char *s2);
 /**
+ * @brief Concatenates two strings into a newly allocated string, then frees the 1st string.
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
+ */
+char *ft_freejoin(char *s1, const char *s2);
+/**
  * @brief Trims a string by removing characters from the start and end based on a set of characters.
  * @param s1 The string to be trimmed.
  * @param set The set of characters to be removed.
@@ -377,6 +384,13 @@ char *ft_strncpy(char *dest, const char *src, size_t n);
  * @return The total length of the source string.
  */
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+/**
+ * @brief Compares two strings.
+ * @param str The first string.
+ * @param cmp The second string to compare.
+ * @return An integer less than, equal to, or greater than zero, depending on whether the first string is less than, equal to, or greater than the second string.
+ */
+int ft_strcmp(const char *str, const char *cmp);
 /**
  * @brief Appends up to dstsize - strlen(dst) - 1 characters from the source string to the destination string.
  * @param dst The destination buffer.
