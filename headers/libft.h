@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/08 23:00:42 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:21:30 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -315,6 +315,13 @@ char **ft_split(const char *s, char c);
  * @return This function does not return; it frees the memory used by the array.
  */
 void ft_free_mtx(char **split);
+
+/**
+    * @brief Frees the memory allocated for an array of strings but doesnt free the mtx itself since stack allocated.
+    * @param mtx A pointer to the array of strings to be freed.
+    * @return This function does not return; it frees the memory used by the array.
+ */
+void ft_free_stack_mtx(char **mtx);
 
 // str_alloc
 /**
