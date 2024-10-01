@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/01 17:21:30 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/01 19:02:00 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,6 +251,15 @@ void *ft_calloc(size_t num_elems, size_t byte_size);
  * @return A pointer to the reallocated memory block, or NULL if the reallocation fails.
  */
 void *ft_realloc(void *ptr, size_t old_size, size_t new_size);
+
+/**
+ * @brief Reallocates memory, resizing it to the new size and sets to 0 all elements.
+ * @param ptr A pointer to the existing memory block to be resized.
+ * @param old_size The current size of the memory block.
+ * @param new_size The new size of the memory block.
+ * @return A pointer to the reallocated memory block, or NULL if the reallocation fails.
+ */
+void *ft_recalloc(void *ptr, size_t old_size, size_t new_size);
 
 // memory_utils
 /**

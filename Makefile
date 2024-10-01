@@ -8,7 +8,7 @@ OBJ_DIR = .obj/
 # Source files grouped by category
 IS_CHAR_SRC = $(addprefix libft_src/is_char/, ft_isdigit.c ft_isalpha.c ft_isalnum.c ft_isascii.c \
 	ft_isspace.c ft_isprint.c ft_toupper.c ft_tolower.c)
-MEM_ALLOC_SRC = $(addprefix libft_src/mem_alloc/, ft_calloc.c ft_realloc.c)
+MEM_ALLOC_SRC = $(addprefix libft_src/mem_alloc/, ft_calloc.c ft_realloc.c ft_recalloc.c)
 MTX_UTILS_SRC = $(addprefix libft_src/mtx_utils/, ft_split.c ft_free_mtx.c ft_free_stack_mtx.c)
 MEMORY_UTILS_SRC = $(addprefix libft_src/memory_utils/, ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c)
 STR_ALLOC_SRC = $(addprefix libft_src/str_alloc/, ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_freejoin.c)

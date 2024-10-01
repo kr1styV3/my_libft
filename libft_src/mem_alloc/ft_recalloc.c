@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_recalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 19:47:36 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/01 18:58:49 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/10/01 18:58:58 by chrlomba          #+#    #+#             */
+/*   Updated: 2024/10/01 19:10:07 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-void *ft_realloc(void *ptr, size_t old_size, size_t new_size)
+void *ft_recalloc(void *ptr, size_t old_size, size_t new_size)
 {
 	void		*new_ptr;
 	size_t		copy_size;
@@ -23,8 +23,8 @@ void *ft_realloc(void *ptr, size_t old_size, size_t new_size)
 		return NULL;
 	}
 	if (ptr == NULL)
-		return (malloc(new_size));
-	new_ptr = malloc(new_size);
+		return (ft_calloc(new_size, sizeof(char)));
+	new_ptr = ft_calloc(new_size, sizeof(ptr));
 	if (new_ptr == NULL)
 		return (NULL);
 	if (old_size < new_size)
