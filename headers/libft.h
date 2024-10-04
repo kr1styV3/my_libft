@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/04 12:20:19 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:58:48 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -458,6 +458,6 @@ char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
  * @return This function does not return; it modifies each character through the provided function.
  */
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
-
+size_t ft_strcspn(const char *s1, const char *s2);
 
 #endif
