@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/04 13:58:48 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:18:20 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -362,6 +362,13 @@ char *ft_strjoin(const char *s1, const char *s2);
  */
 char *ft_strjoin_until_nl(const char *s1, const char *s2);
 /**
+ * @brief Concatenates multiple strings into a newly allocated string.
+ * @param n_elems The number of strings to concatenate.
+ * @param ... The strings to concatenate.
+ * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
+ */
+char    *ft_multijoin(int n_elems, ...);
+/**
  * @brief Concatenates two strings into a newly allocated string, then frees the 1st string.
  * @param s1 The first string.
  * @param s2 The second string.
@@ -458,6 +465,12 @@ char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
  * @return This function does not return; it modifies each character through the provided function.
  */
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
+/**
+ * @brief Searches for the first occurrence of a substring in a string.
+ * @param haystack The string to be searched.
+ * @param needle The substring to search for.
+ * @return an unsigned int  to the first occurrence of the substring, or NULL if not found.
+ */
 size_t ft_strcspn(const char *s1, const char *s2);
 
 #endif
