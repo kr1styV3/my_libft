@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:51:38 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:25 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/04 12:45:00 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ char	*ft_strtrim(const char *str, const char *charset)
 	return (trimmed_str);
 }
 
-int	main(void)
-{
-	const char *str = "   ciao pasqualeitos                                       ";
-	const char *charset = " ";
-	char	*trimmed = ft_strtrim(str, charset);
-	printf("la mia stringa diventa:\n%s", trimmed);
-	free(trimmed);
-}
+// int	main(void)
+// {
+// 	const char *str = "   ciao pasqualeitos                                       ";
+// 	const char *charset = " ";
+// 	char	*trimmed = ft_strtrim(str, charset);
+// 	printf("la mia stringa diventa:\n%s", trimmed);
+// 	free(trimmed);
+// }

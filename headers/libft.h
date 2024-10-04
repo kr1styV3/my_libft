@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/01 19:02:00 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/04 12:20:19 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -354,6 +354,13 @@ char *ft_substr(const char *s, unsigned int start, size_t len);
  * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
  */
 char *ft_strjoin(const char *s1, const char *s2);
+/**
+ * @brief Concatenates two strings into a newly allocated string, stopping at the first newline character.
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
+ */
+char *ft_strjoin_until_nl(const char *s1, const char *s2);
 /**
  * @brief Concatenates two strings into a newly allocated string, then frees the 1st string.
  * @param s1 The first string.
