@@ -21,7 +21,8 @@ static int calculate_total_length(t_join *join)
     total_size += ft_strlen(join->green) + ft_strlen(join->user) + ft_strlen(join->nc);
     total_size += ft_strlen("@") + ft_strlen(join->cyan) + ft_strlen(join->host_name);
     total_size += ft_strlen(join->nc) + ft_strlen(join->blue) + ft_strlen("]") + ft_strlen(join->nc);
-    total_size += ft_strlen(" - ") + ft_strlen("[") + ft_strlen(join->bold) + ft_strlen(join->pwd);
+    total_size += ft_strlen(" - ") + ft_strlen(join->blue) + ft_strlen("[") + ft_strlen(join->nc);
+    total_size += ft_strlen(join->bold) + ft_strlen(join->pwd);
     total_size += ft_strlen(join->nc) + ft_strlen(join->blue) + ft_strlen("]") + ft_strlen(join->nc);
     total_size += ft_strlen("\n") + ft_strlen(join->yellow) + ft_strlen("Minishell");
     total_size += ft_strlen(join->nc) + ft_strlen(join->pink) + ft_strlen(" $ ") + ft_strlen(join->nc) + 1;
@@ -77,12 +78,12 @@ char *ft_multijoin(t_join *join)
     char *result;
 
     total_size = calculate_total_length(join);
-    result = (char *)malloc(total_size * sizeof(char));
+    result = (char *)ft_calloc(total_size, sizeof(char));
     if (!result)
+    {
         return NULL;
-    result[0] = '\0';
-
+    }
 	copy_to_result_part1(result, join);  // Copy the first half
     copy_to_result_part2(result, join);
-    return result;
+    return (result);
 }
