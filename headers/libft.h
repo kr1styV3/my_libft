@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
+/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/04 16:18:20 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:38:41 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -361,13 +361,6 @@ char *ft_strjoin(const char *s1, const char *s2);
  * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
  */
 char *ft_strjoin_until_nl(const char *s1, const char *s2);
-/**
- * @brief Concatenates multiple strings into a newly allocated string.
- * @param n_elems The number of strings to concatenate.
- * @param ... The strings to concatenate.
- * @return A pointer to the newly allocated concatenated string, or NULL if the allocation fails.
- */
-char    *ft_multijoin(int n_elems, ...);
 /**
  * @brief Concatenates two strings into a newly allocated string, then frees the 1st string.
  * @param s1 The first string.
