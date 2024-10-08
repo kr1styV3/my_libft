@@ -24,6 +24,7 @@ PRINTF_SRC = $(addprefix libft_src/printf_src/, ft_printf.c ft_printf_str.c ft_p
 GET_NEXT_LINE_SRC = $(addprefix libft_src/get_next_line_src/, get_next_line.c get_next_line_utils.c)
 PUSH_SWAP_HELPERS_SRC = $(addprefix libft_src/push_swap_helpers_src/helper/, ft_check_input.c ft_is_valid_input.c)
 PUSH_SWAP_MOVES_SRC = $(addprefix libft_src/push_swap_helpers_src/moves/, ft_push.c ft_rotate.c ft_reverse_rotate.c ft_swap.c)
+VARIADIC_SRC = $(addprefix libft_src/variadic_ft/, ft_multijoin.c my_va_list.c)
 # Object files for each category
 IS_CHAR_OBJ = $(IS_CHAR_SRC:libft_src/is_char/%.c=$(OBJ_DIR)%.o)
 MEM_ALLOC_OBJ = $(MEM_ALLOC_SRC:libft_src/mem_alloc/%.c=$(OBJ_DIR)%.o)
@@ -35,6 +36,7 @@ FILE_DESCRIPTOR_OBJ = $(FILE_DESCRIPTOR_SRC:libft_src/file_descriptor/%.c=$(OBJ_
 LIST_OBJ = $(LIST_SRC:libft_src/list/%.c=$(OBJ_DIR)%.o)
 ARR_TO_NUM_OBJ = $(ARR_TO_NUM_SRC:libft_src/arr_to_num/%.c=$(OBJ_DIR)%.o)
 ERROR_OBJ = $(ERROR_SRC:libft_src/error_managment/%.c=$(OBJ_DIR)%.o)
+VARIADIC_OBJ = $(VARIADIC_SRC:libft_src/variadic_ft/%.c=$(OBJ_DIR)%.o)
 
 PRINTF_OBJ = $(PRINTF_SRC:libft_src/printf_src/%.c=$(OBJ_DIR)%.o)
 GET_NEXT_LINE_OBJ = $(GET_NEXT_LINE_SRC:libft_src/get_next_line_src/%.c=$(OBJ_DIR)%.o)
@@ -45,7 +47,7 @@ PUSH_SWAP_MOVES_OBJ = $(PUSH_SWAP_MOVES_SRC:libft_src/push_swap_helpers_src/move
 OBJ = $(IS_CHAR_OBJ) $(MEM_ALLOC_OBJ) $(MTX_UTILS_OBJ) $(MEMORY_UTILS_OBJ) $(STR_ALLOC_OBJ) \
 	$(STR_UTILS_OBJ) $(FILE_DESCRIPTOR_OBJ) $(LIST_OBJ) $(ARR_TO_NUM_OBJ) \
 	$(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(PUSH_SWAP_HELPERS_OBJ) $(PUSH_SWAP_MOVES_OBJ) \
-	$(ERROR_OBJ)
+	$(ERROR_OBJ) $(VARIADIC_OBJ)
 
 # ANSI escape sequence for no color (reset)
 NC = \033[0m
@@ -94,6 +96,9 @@ $(OBJ_DIR)%.o: libft_src/push_swap_helpers_src/moves/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/error_managment/%.c | $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)%.o: libft_src/variadic_ft/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to make the library, only display ASCII art on success
