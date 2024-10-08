@@ -8,6 +8,21 @@ typedef struct	s_my_va_list
 	void		*arg;
 }				t_va_list;
 
+typedef struct s_join
+{
+    const char *blue;
+    const char *nc;
+    const char *green;
+    const char *user;
+    const char *cyan;
+    const char *host_name;
+    const char *bold;
+    const char *pwd;
+    const char *yellow;
+    const char *pink;
+} t_join;
+
+
 /**
  * @brief Initializes the variadic argument list.
  *
@@ -41,26 +56,36 @@ void *ft_va_arg(t_va_list *va_list, size_t size);
  */
 void ft_va_end(t_va_list *va_list);
 /**
- * @brief Joins multiple strings into a single string.
+ * @brief Concatenates multiple strings into a single string to form the prompt.
  *
- * This function takes a variable number of string arguments and concatenates them
- * into one resulting string. The function allocates memory for the resulting string,
- * which the caller is responsible for freeing after use.
+ * This function concatenates several components (such as colors, user info, host, and path)
+ * to build a formatted shell prompt. The total length of the resulting string is calculated,
+ * and memory is allocated dynamically to hold the final string.
  *
- * @param count The number of strings to be concatenated.
- *              The function expects `count` strings to be passed as variadic arguments.
+ * The concatenation is split into two helper functions to ensure no function exceeds 25 lines,
+ * as per the project constraints.
  *
- * @return A newly allocated string containing the concatenation of all input strings,
- *         or an empty string if no strings are passed.
- *         The caller must free the returned string when it is no longer needed.
+ * @param join A pointer to a `t_join` struct containing all the strings (colors, user, host, etc.)
+ *             that will be concatenated.
  *
- * Example usage:
+ * @return A pointer to the dynamically allocated string containing the final concatenated result.
+ *         The caller is responsible for freeing the memory when it is no longer needed.
+ *
+ * @note The resulting string will include color codes and other prompt components.
+ *       If memory allocation fails, the function will return `NULL`.
+ *
+ * Example:
  * @code
- *     char *joined = ft_multijoin(3, "Hello", " ", "world!");
- *     printf("%s\n", joined);  // Output: "Hello world!"
- *     free(joined);
+ * t_join join;
+ * join.blue = BLUE;
+ * join.nc = NC;
+ * // Set other components...
+ *
+ * char *prompt = ft_multijoin(&join);
+ * printf("%s", prompt);
+ * free(prompt);
  * @endcode
  */
-char	*ft_multijoin(int count, ...);
+char	*ft_multijoin(t_join *join);
 
 # endif
