@@ -17,12 +17,16 @@ void	ft_free_mtx(char **split)
 	int	i;
 
 	i = 0;
-	while (split[i])
+	if (split != NULL)
 	{
+		while (split[i])
+		{
 		if (split[i] == NULL)
 			break ;
-		free(split[i]);
-		i++;
+			if (split[i])
+				free(split[i]);
+			i++;
+		}
 	}
 	free(split);
 }
