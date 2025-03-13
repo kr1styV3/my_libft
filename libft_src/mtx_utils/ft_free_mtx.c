@@ -19,6 +19,8 @@ void	ft_free_mtx(char **split)
 	i = 0;
 	while (split[i])
 	{
+		if (split[i] == NULL)
+			break ;
 		free(split[i]);
 		i++;
 	}
