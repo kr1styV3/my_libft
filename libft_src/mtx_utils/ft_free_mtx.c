@@ -27,5 +27,6 @@ void	ft_free_mtx(char **split)
 		}
 	}
 	free(split);
+	split = NULL;
 }
 
