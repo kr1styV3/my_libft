@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_until_nl.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
+/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:17:27 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/04 12:33:57 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/03/28 12:25:37 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strjoin_until_nl(char const *str1, char const *str2)
 		return (NULL);
 	str1_len = ft_strlen(str1);
 	str2_len = ft_strlen(str2);
-	new_str = malloc(((str1_len + str2_len) + 1) * sizeof(char));
+	new_str = (char *)ft_calloc(((str1_len + str2_len) + 1) , sizeof(char));
 	if (!new_str)
 		return (NULL);
 	new_str_counter = 0;
@@ -47,6 +47,5 @@ char	*ft_strjoin_until_nl(char const *str1, char const *str2)
 		copy_chars(new_str, str1, &new_str_counter, str1_len);
 	if (str2)
 		copy_chars(new_str, str2, &new_str_counter, str2_len);
-	new_str[new_str_counter] = '\0';
 	return (new_str);
 }
