@@ -12,7 +12,7 @@ MEM_ALLOC_SRC = $(addprefix libft_src/mem_alloc/, ft_calloc.c ft_realloc.c ft_re
 MTX_UTILS_SRC = $(addprefix libft_src/mtx_utils/, ft_split.c ft_free_mtx.c ft_free_stack_mtx.c)
 MEMORY_UTILS_SRC = $(addprefix libft_src/memory_utils/, ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c)
 STR_ALLOC_SRC = $(addprefix libft_src/str_alloc/, ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_freejoin.c\
-	ft_strjoin_until_nl.c)
+	ft_strjoin_until_nl.c ft_strdup_with_free.c ft_strndup.c)
 STR_UTILS_SRC = $(addprefix libft_src/str_utils/, ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
 	ft_strncpy.c ft_strncmp.c ft_strnstr.c ft_strmapi.c ft_striteri.c ft_strcmp.c ft_strcspn.c)
 FILE_DESCRIPTOR_SRC = $(addprefix libft_src/file_descriptor/, ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c)

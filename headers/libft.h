@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/08 11:38:41 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:06:01 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -465,5 +465,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*));
  * @return an unsigned int  to the first occurrence of the substring, or NULL if not found.
  */
 size_t ft_strcspn(const char *s1, const char *s2);
+char	*__ft_strdup_with_free(char *str);
+char	*ft_strndup(const char *s, size_t n);
 
 #endif
