@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 22:53:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/08 22:54:55 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:18:11 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_freejoin(char *str1, char const *str2)
 		return (NULL);
 	str1_len = ft_strlen(str1);
 	str2_len = ft_strlen(str2);
-	new_str = ft_calloc(((str1_len + str2_len) + 1) , sizeof(char));
+	new_str = ft_calloc(((str1_len + str2_len) + 1), sizeof(char));
 	if (!new_str)
 		return (NULL);
 	new_str_counter = 0;

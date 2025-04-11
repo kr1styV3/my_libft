@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:12:42 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:30 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:08:32 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *str1, char const *str2)
 		return (NULL);
 	str1_len = ft_strlen(str1);
 	str2_len = ft_strlen(str2);
-	new_str = malloc(((str1_len + str2_len) + 1) * sizeof(char));
+	new_str = malloc(((str1_len + str2_len) + 1) * sizeof(char ));
 	if (!new_str)
 		return (NULL);
 	new_str_counter = 0;

@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:17:27 by chrlomba          #+#    #+#             */
-/*   Updated: 2025/03/28 12:25:37 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:18:11 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,18 @@ static void	copy_chars(char *dest, const char *src,
 	(*dest_counter)++;
 }
 
+static size_t	ft_strlen_nl(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str && str[i] != '\0' && str[i] != 32)
+		i++;
+	return (i);
+}
+
 char	*ft_strjoin_until_nl(char const *str1, char const *str2)
 {
 	size_t		new_str_counter;
@@ -38,8 +50,8 @@ char	*ft_strjoin_until_nl(char const *str1, char const *str2)
 	if (!str1 && !str2)
 		return (NULL);
 	str1_len = ft_strlen(str1);
-	str2_len = ft_strlen(str2);
-	new_str = (char *)ft_calloc(((str1_len + str2_len) + 1) , sizeof(char));
+	str2_len = ft_strlen_nl(str2);
+	new_str = (char *)ft_calloc(((str1_len + str2_len) + 1), sizeof(char ));
 	if (!new_str)
 		return (NULL);
 	new_str_counter = 0;

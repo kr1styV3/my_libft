@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr> >        +#+  +:+       +#+        */
+/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:58:58 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/10/01 19:10:07 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:18:22 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-void *ft_recalloc(void *ptr, size_t old_size, size_t new_size)
+void	*ft_recalloc(void *ptr, size_t old_size, size_t new_size)
 {
 	void		*new_ptr;
 	size_t		copy_size;
@@ -20,7 +20,7 @@ void *ft_recalloc(void *ptr, size_t old_size, size_t new_size)
 	if (new_size == 0)
 	{
 		free(ptr);
-		return NULL;
+		return (NULL);
 	}
 	if (ptr == NULL)
 		return (ft_calloc(new_size, sizeof(char)));

@@ -6,13 +6,14 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 16:15:03 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/09/07 16:18:00 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:17:41 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-int ft_isspace(int chr)
+int	ft_isspace(int chr)
 {
-	return (chr == ' ' || chr == '\t' || chr == '\n' || chr == '\v' || chr == '\f' || chr == '\r' || chr == '\a');
+	return (chr == ' ' || chr == '\t' || chr == '\n'
+		|| chr == '\v' || chr == '\f' || chr == '\r' || chr == '\a');
 }

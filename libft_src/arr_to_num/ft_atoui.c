@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoui.c                                          :+:      :+:    :+:   */
+/*   ft_atoui.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:37:03 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:52 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:23:08 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 unsigned int	ft_atoui(const char *number_str)
 {
-	int		            i;
-	int		            minus_sign;
+	int					i;
+	int					minus_sign;
 	unsigned int		converted_result;
 
 	i = 0;
