@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:17:27 by chrlomba          #+#    #+#             */
-/*   Updated: 2025/04/11 13:18:11 by chrlomba         ###   ########.fr       */
+/*   Updated: 2025/04/11 18:49:00 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strjoin_until_nl(char const *str1, char const *str2)
 	if (!str1 && !str2)
 		return (NULL);
 	str1_len = ft_strlen(str1);
-	str2_len = ft_strlen_nl(str2);
+	str2_len = ft_strlen_nl((char *)str2);
 	new_str = (char *)ft_calloc(((str1_len + str2_len) + 1), sizeof(char ));
 	if (!new_str)
 		return (NULL);
