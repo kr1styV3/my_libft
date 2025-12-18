@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_mtx.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chrilomb <chrilomb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:10:32 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/20 01:18:15 by chrlomba         ###   ########.fr       */
+/*   Created: 2024/02/19 18:10:32 by chrilomb          #+#    #+#             */
+/*   Updated: 2024/02/20 01:18:15 by chrilomb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/push_swap_helper.h"
+#include <stdlib.h>
+
 
 void	ft_free_mtx(char **split)
 {

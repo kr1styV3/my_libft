@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chrilomb <chrilomb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 21:00:07 by chrlomba          #+#    #+#             */
-/*   Updated: 2025/04/10 16:15:50 by chrlomba         ###   ########.fr       */
+/*   Created: 2023/11/23 21:00:07 by chrilomb          #+#    #+#             */
+/*   Updated: 2025/12/18 20:06:01 by chrilomb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "push_swap_helper.h"
 
 // List structure
 typedef struct s_list
@@ -219,32 +218,6 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
  */
 t_list			*ft_lstmap(t_list *lst,
 					void *(*f)(void *), void (*del)(void *));
-/**
- * @brief Creates a new integer list element.
- * @param content The integer content to be stored in the new list element.
- * @return A pointer to the newly created integer list element.
- */
-t_int_list		*ft_int_lstnew(int content);
-/**
- * @brief Clears the entire integer list and frees its content.
- * @param stack The integer list to be cleared.
- * @return This function does not return; it modifies and frees the list.
- */
-void			ft_int_lstclear(t_int_list *stack);
-/**
- * @brief Adds a new integer element to the end of the integer list.
- * @param lst A pointer to the pointer to the first element of the integer list.
- * @param new The new integer element to be added.
- * @return This function does not return; it modifies the list.
- */
-void			ft_int_lstadd_back(t_int_list **lst, t_int_list *new);
-/**
- * @brief Counts the number of elements in the integer list.
- * @param lst The integer list to be counted.
- * @return The number of elements in the integer list.
- */
-int				ft_int_lstsize(t_int_list *lst);
-
 // mem_alloc
 /**
  * @brief Allocates and zeroes out memory for an array of elements.

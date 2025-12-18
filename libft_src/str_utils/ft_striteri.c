@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chrilomb <chrilomb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 21:13:49 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/07 17:11:31 by chrlomba         ###   ########.fr       */
+/*   Created: 2023/11/25 21:13:49 by chrilomb          #+#    #+#             */
+/*   Updated: 2025/12/18 19:57:14 by chrilomb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 // int	main(void)
 // {
-// 	char	s[100] = "laske tämä hei banaanit aliravitut 
+// 	char	s[100] = "laske tämä hei banaanit aliravitut
 //jotka haisevat japanilaisilta kanalta makedonialaisella tavalla";
 // 	ft_striteri(s, putword);
 // 	for(int i = 0; i < 73; i++)
