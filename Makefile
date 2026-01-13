@@ -55,43 +55,43 @@ all: $(NAME)
 
 # Pattern rules to compile object files from different categories
 $(OBJ_DIR)%.o: libft_src/is_char/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/mem_alloc/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/mtx_utils/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/memory_utils/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/str_alloc/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/str_utils/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/file_descriptor/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/list/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/arr_to_num/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/printf_src/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/get_next_line_src/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/error_managment/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR)%.o: libft_src/variadic_ft/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to make the library, only display ASCII art on success
 $(NAME): $(OBJ)
